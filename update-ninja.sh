@@ -1,13 +1,13 @@
 cd /ql/ninja/backend
 
 rm -rf .env
-wget https://raw.githubusercontent.com/LJMX996/jd/help/.env
+wget https://raw.githubusercontent.com/ANYUNG533/jd/help/.env
 
 
 
 
 rm -rf /ql/ninja/backend/static/*
-cp -rf /ql/repo/LJMX996_jd_aaron/static/* /ql/ninja/backend/static/
+cp -rf /ql/repo/ANYUNG533_jd/static/* /ql/ninja/backend/static/
 
 cd /ql/ninja/backend
 pnpm install
@@ -19,7 +19,7 @@ cd /ql/ninja/backend/static
 
 rm -rf push.jpg
 
-wget https://raw.githubusercontent.com/LJMX996/jd/help/push.jpg
+wget https://raw.githubusercontent.com/ANYUNG533/jd/help/push.jpg
 
 
 

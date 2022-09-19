@@ -1,76 +1,4 @@
-# 注意:本仓库偷助力，偷CK，一觉醒来服务器都给你偷走，慎用！！！
 
-
-# jd_scripts
-> * 删除脚本内inviteCodes
-> * 剔除内置助力链接
-> * 其他未修改，用法与原版相同￼
-> * 本仓库自用，脑残滚尼玛远点
-> * 他人使用本仓库与本人无关
-> * 不准分享此垃圾仓库。
-> * 这么垃圾的仓库也不会有人用的吧！
-
-# 使用方法
-
-### 新建容器
-
-#### 使用docker-compose
-   ```diff
-version: "2.0"
-services:
-  jd1:
-    image: whyour/qinglong:latest
-    container_name: ql1
-    restart: always
-    tty: true
-    network_mode: bridge
-    hostname: ql1
-    volumes:
-      - /volume1/docker/ql/1/config:/ql/config
-      - /volume1/docker/ql/1/log:/ql/log
-      - /volume1/docker/ql/1/repo:/ql/repo
-      - /volume1/docker/ql/1/db:/ql/db
-      - /volume1/docker/ql/1/scripts:/ql/scripts
-      - /volume1/docker/ql/1/raw:/ql/raw
-      - /volume1/docker/ql/1/ninja:/ql/ninja
-    ports:
-      - 8701:5700
-      - 701:701
-    environment: 
-      - ENABLE_TTYD=true             
-      - ENABLE_WEB_PANEL=true
-      - ENABLE_HANGUP=false
-      - ENABLE_TG_BOT=true
-
-
-  jd2:
-    image: whyour/qinglong:latest
-    container_name: ql2
-    restart: always
-    tty: true
-    network_mode: bridge
-    hostname: ql2
-    volumes:
-      - /volume1/docker/ql/2/config:/ql/config
-      - /volume1/docker/ql/2/log:/ql/log
-      - /volume1/docker/ql/2/repo:/ql/repo
-      - /volume1/docker/ql/2/db:/ql/db
-      - /volume1/docker/ql/2/scripts:/ql/scripts
-      - /volume1/docker/ql/2/raw:/ql/raw
-      - /volume1/docker/ql/2/ninja:/ql/ninja
-    ports:
-      - 8702:5700
-      - 702:701
-    environment: 
-      - ENABLE_TTYD=true             
-      - ENABLE_WEB_PANEL=true
-      - ENABLE_HANGUP=false
-      - ENABLE_TG_BOT=true
-   ```
-
-
-
-## 使用仓库提醒(重要❗❗❗❗)
 
 👇🏻
 
@@ -169,19 +97,6 @@ fi
    ```
 
 
-# ninja安装参考(已经彻底挂逼，可以忽略)
-机器人命令如下
 
-> * 名称:安装ninja
-> * 命令:nohup task /ql/repo/LJMX996_jd_aaron/install-ninja.sh
-
-
-> * 名称:更新&启动ninja
-> * 命令:nohup task /ql/repo/LJMX996_jd_aaron/up-ninja.sh
-
-
-# 机器人扫码(已经彻底挂逼，可以忽略)
-
-> * /cmd cd /ql/repo/dockerbot/jbot/bot/ && rm -rf getcookie.py && wget https://raw.githubusercontent.com/LJMX996/jd/help/getcookie.py
 
 
