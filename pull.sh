@@ -1,5 +1,5 @@
 #cron 20 * * * * pull.sh
-ql repo https://github.com/ANYUNG533/jd.git "jd_|jx_|gua_|zy_|jd-task-|jddj_|ql_|ck_" "util|utils|static|tools|activity|backUp|jd_delCoupon|format_|tmp|cdle|helpjs|tmpcron|sillyGirl|dockerbot" "" "jd"
+ql repo https://github.com/ANYUNG533/jd.git "jd_|jx_|gua_|zy_|jd-task-|jddj_|ql_|ck_" "util|utils|static|tools|activity|backUp|jd_delCoupon|format_|tmp|cdle|helpjs|tmpcron|sillyGirl|dockerbot" "" "main"
 
 
 
