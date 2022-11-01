@@ -7,7 +7,7 @@ wget https://raw.githubusercontent.com/ANYUNG533/jd/help/.env
 
 
 rm -rf /ql/ninja/backend/static/*
-cp -rf /ql/repo/ANYUNG533_jd/static/* /ql/ninja/backend/static/
+cp -rf /ql/repo/ANYUNG533_jd_JOJO/static/* /ql/ninja/backend/static/
 
 cd /ql/ninja/backend
 pnpm install
