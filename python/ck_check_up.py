@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*
-"""
-new Env('强制更新ck');
-        
-"""
+'''
+new Env('检测更新ck');
 
+'''
 import socket  # 用于端口检测
 import base64  # 用于编解码
 import json  # 用于Json解析
@@ -274,7 +273,7 @@ def check_ck(ck):  # 方法 检查 Cookie有效性 使用变量传递 单次调�
             minute = int((remainingTime % 3600) / 60)  # 时间运算操作 [int]
             logger.info(str(pin) + ";未到期，{0}时{1}分后更新\n".format(hour, minute))  # 标准日志输出
             return True  # 返回 Bool类型 True
-    elif 1 == 1:  # 判断分支 WSKEY_DISCHECK 是否存在于系统变量
+    elif 1 == 0:  # 判断分支 WSKEY_DISCHECK 是否存在于系统变量
         logger.info("不检查账号有效性\n--------------------\n")  # 标准日志输出
         return False  # 返回 Bool类型 False
     else:  # 判断分支
@@ -583,7 +582,7 @@ if __name__ == '__main__':  # Python主函数执行入口
     if "WSKEY_SLEEP" in os.environ and str(os.environ["WSKEY_SLEEP"]).isdigit():  # 判断变量[WSKEY_SLEEP]是否为数字类型
         sleepTime = int(os.environ["WSKEY_SLEEP"])  # 获取变量 [int]
     else:  # 判断分支
-        sleepTime = 5  # 默认休眠时间 10秒
+        sleepTime = 3  # 默认休眠时间 10秒
     for ws in wslist:  # wslist变量 for循环  [wslist -> ws]
         wspin = ws.split(";")[0]  # 变量分割 ;
         if "pin" in wspin:  # 判断 pin 是否存在于 [wspin]

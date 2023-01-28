@@ -1,8 +1,8 @@
 /*
 超市盲盒
 入口：京东APP-更多-超市盲盒
-39 12,21 * * *  jd_marketmh.js
-updatetime：2022-10-28
+35 10,20 * * *  jd_marketmh.js
+updatetime：2022-12-8
 jdpro
  */
 
@@ -10,7 +10,7 @@ const $ = new Env('超市盲盒');
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
-let cookiesArr = [], cookie = '', secretp = '', joyToken = "";
+let cookiesArr = [], cookie = '';
 let linkId = 'qHqXOx2bvqgFOzTH_-iJoQ';
 $.shareCoseList = [];
 if ($.isNode()) {
@@ -119,7 +119,7 @@ function starShopPageInfo(body) {
 function starShopDraw(body) {
     let opt =
     {
-        url: 'https://api.m.jd.com/?functionId=starShopDraw&body={%22linkId%22:%22qHqXOx2bvqgFOzTH_-iJoQ%22}&appid=activities_platform&t=1667822944208&client=android&clientVersion=11.3.0&h5st=20221107200904210%3B6499624445078456%3B568c6%3Btk02w69911b1718n4BJd1F3S7xUk5Lw%2Bnu3d2ZLLORy0io21aJoCapEcA8gbK9tvLzON1FQ1iLeder0OAU4Th%2F7yWwZn%3Beb5ae376b553da072432e7749e8b852745ad3ea35e554ce04d1eb2b0ab1c3bfa%3B3.1%3B1667822944210%3B62f4d401ae05799f14989d31956d3c5f0a269d1342e4ecb6ab00268fc69555cdc3295f00e681fd72cd76a48b9fb3faf3579d80b37c85b023e9e8ba94d8d2b852b9cbef42726bbe41ffd8c74540f4a1ced584468ba9e46bfbef62144b678f5532e02456edc95e6131cb12c2dd5fa5c6c0ca7e28a3c717e0dd9ae889f2eaf9441c5254165d7b1aa2509f8e74f626a4f631',
+        url: 'https://api.m.jd.com/?functionId=starShopDraw&body={%22linkId%22:%22qHqXOx2bvqgFOzTH_-iJoQ%22}&appid=activities_platform&t=1670507211242&client=android&clientVersion=11.3.6&h5st=20221208214651243%3B6499624445078456%3B568c6%3Btk02w9afa1ba718nKF1dg2Ju13gxp2k5rjVSiS%2FQuvXtk6w4eoO3IPDbWtfZkJfa%2Fj6G0KAqi2mmLHK0je11TSeNx%2FhS%3Bb485e5f4f7c931db46926b6ea70493ae88d3b2dfbbc8c5a15eff25bcb959ff68%3B3.1%3B1670507211243%3B62f4d401ae05799f14989d31956d3c5f0a269d1342e4ecb6ab00268fc69555cdc3295f00e681fd72cd76a48b9fb3faf3579d80b37c85b023e9e8ba94d8d2b852b9cbef42726bbe41ffd8c74540f4a1ced584468ba9e46bfbef62144b678f5532e02456edc95e6131cb12c2dd5fa5c6c0ca7e28a3c717e0dd9ae889f2eaf9441c5254165d7b1aa2509f8e74f626a4f631&cthr=1&uuid=',
         //body: `functionId=${functionId}&body=${JSON.stringify(body)}&client=wh5&clientVersion=1.0.0&uuid=ef746bc0663f7ca06cdd1fa724c15451900039cf`,
         headers: {
             'User-Agent': UA,
@@ -135,6 +135,7 @@ function starShopDraw(body) {
                     console.log(`${JSON.stringify(err)}`)
                     console.log(`starShopDraw 请求失败，请检查网路重试`)
                 } else {
+                    console.log(data)					
                     data = JSON.parse(data);
                     if (data.success) {
                         if (data.data.prizeType === 2) {
